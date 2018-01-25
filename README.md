@@ -5,8 +5,8 @@ Ethereum Oraclized Contract where team sends funds to a player depending on exte
 ## Scenario
 
 1. Contract owner is a team with funds
-2. Team requests external API calls for a permission to send funds every N minutes
-3. As soon as API call responses with an affirmative permission funds transfer is executed and contract is considered fulfiled
+2. Team requests external API calls for a permission to send funds to a player every N minutes
+3. As soon as API call responses with an affirmative permission, funds are transfered contract is considered fulfilled.
 
 ## Install
 
