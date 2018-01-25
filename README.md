@@ -11,4 +11,4 @@ Ethereum Oraclized Contract where team sends funds to a player depending on exte
 ## Install
 
 1. npm install -g truffle
-2. Install [Ganache](http://truffleframework.com/ganache/)
+2. Install [Ganache](http://truffleframework.com/ganache/) ([Windows 10](https://www.howtogeek.com/285410/how-to-install-.appx-or-.appxbundle-software-on-windows-10/))
