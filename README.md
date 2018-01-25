@@ -13,5 +13,9 @@ Ethereum Oraclized Contract where team sends funds to a player depending on exte
 1. `npm install -g truffle`
 2. `npm intall -g ganache-cli`
 
+_install ethereum bridge in parent folder_
+
+3. `cd .. && git clone https://github.com/oraclize/ethereum-bridge`
+
 Install [Ganache](http://truffleframework.com/ganache/) ([Windows 10](https://www.howtogeek.com/285410/how-to-install-.appx-or-.appxbundle-software-on-windows-10/))
 
