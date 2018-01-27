@@ -14,12 +14,12 @@ List of Items to Install
 - Create Accounts
 - Private Blockchain Network
 
-## Clone project and it's dependencies
+### Clone project and it's dependencies
 1. `npm install -g truffle`
 2. `npm install -g ethereumjs-testrpc`
 3. install [Geth](https://ethereum.github.io/go-ethereum/downloads/)
 
-## Create Team and Player account
+### Create Team and Player account
 1. `cd D:\ && mkdir ethereum`
 2. from the current project folder 
 - `geth --datadir D:\ethereum\test-net-blockchain --keystore D:\ethereum\test-net-blockchain\keystore --password ./passwords/team.txt account new > ./accounts/team.txt`
@@ -33,7 +33,7 @@ List of Items to Install
    }
 ```
 
-## Init Genesis + accounts with prepopulated balance
+### Init Genesis + accounts with prepopulated balance
 `geth --identity "TeamPlayerTestNetNode" --networkid 5777 --datadir D:\ethereum\test-net-blockchain --keystore D:\ethereum\test-net-blockchain\keystore init genesis.json`
 
 
@@ -41,7 +41,7 @@ List of Items to Install
 `geth console --identity "TeamPlayerTestNetNode" --networkid 5777 --rpcaddr "127.0.0.1" --rpcport "8545" --datadir D:\ethereum\test-net-blockchain --keystore D:\ethereum\test-net-blockchain\keystore`
 
 
-### List of steps to proceed with first transaction
+# List of steps to proceed with first transaction
 [Get balance]
 
 `web3.fromWei(web3.eth.getBalance(web3.eth.accounts[0]), "ether")`
