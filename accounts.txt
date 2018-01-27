@@ -1,0 +1,28 @@
+Init Private Blockchain
+
+
+Create Accounts
+===================================
+geth --datadir D:\ethereum\test-net-blockchain --keystore D:\ethereum\test-net-blockchain\keystore --password ./passwords/team.txt account new > ./accounts/team.txt
+
+geth --datadir D:\ethereum\test-net-blockchain --keystore D:\ethereum\test-net-blockchain\keystore --password ./passwords/player.txt account new > ./accounts/player.txt
+
+
+Init Genesis (Change genesis.json with a created accounts)
+===================================
+geth --identity "TeamPlayerTestNetNode" --networkid 5777 --datadir D:\ethereum\test-net-blockchain --keystore D:\ethereum\test-net-blockchain\keystore init genesis.json
+
+
+Start Node
+===================================
+geth console --identity "TeamPlayerTestNetNode" --networkid 5777 --datadir D:\ethereum\test-net-blockchain --keystore D:\ethereum\test-net-blockchain\keystore
+
+
+Javascript Console Commands
+===================================
+[Get balance]
+web3.fromWei(web3.eth.getBalance(web3.eth.accounts[0]), "ether")
+[Unlock sending account]
+personal.unlockAccount(eth.account[0], "123456789")
+[Send Ether]
+eth.sendTransaction({from:eth.accounts[0], to:eth.accounts[1], value: web3.toWei(1, "ether")})
