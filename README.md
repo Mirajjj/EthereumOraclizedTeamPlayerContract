@@ -41,7 +41,7 @@ List of Items to Install
 `geth console --identity "TeamPlayerTestNetNode" --networkid 5777 --rpcaddr "127.0.0.1" --rpcport "8545" --datadir D:\ethereum\test-net-blockchain --keystore D:\ethereum\test-net-blockchain\keystore`
 
 
-# List of steps to proceed with first transaction
+## List of steps to proceed with first transaction
 [Get balance]
 
 `web3.fromWei(web3.eth.getBalance(web3.eth.accounts[0]), "ether")`
