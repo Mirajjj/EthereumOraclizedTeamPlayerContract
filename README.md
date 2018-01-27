@@ -37,9 +37,20 @@ List of Items to Install
 1. `geth --identity "TeamPlayerTestNetNode" --networkid 5777 --datadir D:\ethereum\test-net-blockchain --keystore D:\ethereum\test-net-blockchain\keystore init genesis.json`
 
 
+## Start Private Network 
+`geth console --identity "TeamPlayerTestNetNode" --networkid 5777 --rpcaddr "127.0.0.1" --rpcport "8545" --datadir D:\ethereum\test-net-blockchain --keystore D:\ethereum\test-net-blockchain\keystore`
 
-`geth --identity "TeamPlayerTestNetNode" --networkid 5777 --datadir D:\ethereum\test-net-blockchain --keystore D:\ethereum\test-net-blockchain\keystore init genesis.json`
-`cd .. && git clone https://github.com/oraclize/ethereum-bridge //install ethereum bridge in parent folder`
+
+### List of steps to proceed with first transaction
+[Get balance]
+`web3.fromWei(web3.eth.getBalance(web3.eth.accounts[0]), "ether")`
+[Unlock sending account]
+`personal.unlockAccount(eth.account[0], "123456789")`
+[Send Ether]
+`eth.sendTransaction({from:eth.accounts[0], to:eth.accounts[1], value: web3.toWei(1, "ether")})`
+[Start Miner]
+`miner.start()`
+
 
 
 
