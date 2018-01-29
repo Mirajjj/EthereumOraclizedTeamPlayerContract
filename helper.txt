@@ -15,7 +15,7 @@ geth --identity "TeamPlayerTestNetNode" --networkid 5777 --datadir D:\ethereum\t
 
 Start Node
 ===================================
-geth console --identity "TeamPlayerTestNetNode" --networkid 5777 --datadir D:\ethereum\test-net-blockchain --keystore D:\ethereum\test-net-blockchain\keystore
+geth console 2 --identity "TeamPlayerTestNetNode" --networkid 5777 --rpcaddr "127.0.0.1" --rpc --rpcport "8545" --datadir D:\ethereum\test-net-blockchain --keystore D:\ethereum\test-net-blockchain\keystore
 
 
 Javascript Console Commands
@@ -23,6 +23,17 @@ Javascript Console Commands
 [Get balance]
 web3.fromWei(web3.eth.getBalance(web3.eth.accounts[0]), "ether")
 [Unlock sending account]
-personal.unlockAccount(eth.account[0], "123456789")
+personal.unlockAccount(eth.accounts[0], "123456789")
 [Send Ether]
 eth.sendTransaction({from:eth.accounts[0], to:eth.accounts[1], value: web3.toWei(1, "ether")})
+[Start Miner]
+miner.start()
+[Access Deployed Contract]
+// initiate contract for an address
+contractName = web3.eth.contract(abi)
+// initiate contract for an address
+instanceContract.at('0xc4abd0339eb8d57087278718986382264244252f');
+// call constant function
+sendEtherContract.new(eth.accounts[1], {from: eth.accounts[0], value: web3.toWei("1", "ether"), data: bytecode, gas: 47000000})
+
+

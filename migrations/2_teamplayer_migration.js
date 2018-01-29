@@ -1,6 +1,6 @@
-var TeamPlayerMigration = artifacts.require("TeamPlayer");
+var sendEtherContract = artifacts.require("sendEther");
 
-module.exports = function(deployer) {
+module.exports = function(deployer, network, accounts) {
   // deployment steps
-  deployer.deploy(TeamPlayerMigration);
+  deployer.deploy(sendEtherContract);
 };

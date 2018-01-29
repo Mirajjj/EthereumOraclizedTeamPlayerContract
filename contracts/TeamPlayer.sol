@@ -1,6 +1,6 @@
 pragma solidity ^0.4.18;
 
-import "github.com/oraclize/ethereum-api/oraclizeAPI.sol";
+import "./usingOraclize.sol";
 
 contract TeamPlayer is usingOraclize {
     address public team;
@@ -16,9 +16,9 @@ contract TeamPlayer is usingOraclize {
     event LogString(string message);
     event LogSU(string message, uint number);
     
-    function TeamPlayer() public payable {
+    function TeamPlayer(address _player) public payable {
         team = msg.sender;
-        player = 0xe602c85b02fd233d709da282ceb89f29a62ec4c8;
+        player = _player;
         
         requestTransfer();
     }
